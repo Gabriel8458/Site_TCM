@@ -152,6 +152,11 @@
             background-color: rgba(200, 200, 255, 0.5);
             border-color: rgba(0, 0, 0, 0.3);
         }
+		
+		.titulobanner{
+		margin-top:-10.7%;
+		}
+		
     </style>
     <script>
         function veri() {
@@ -167,12 +172,13 @@
                 window.alert("Preencha o Telefone!");
                 document.getElementById("Telefone").focus();
             }
+			else if (document.getElementById("txtarea_message").value == "") {
+                window.alert("Preencha a sua mensagem!");
+                document.getElementById("Mensagem").focus();
+            }
             else {
                 window.alert("Dados enviados com sucesso!!!");
             }
-        }
-        function limpar() {
-            document.getElementById("nome").focus();
         }
     </script>
 </head>
@@ -191,7 +197,7 @@
                             </li>
                             <li><a href="empresa.html">EMPRESA &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a></li>
-                            <li><a href="serviços.html">SERVIÇOS &nbsp;&nbsp;&nbsp;&nbsp;
+                            <li><a href="serviços.html">PORTFÓLIO &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a></li>
                             <li><a class="pagecolor" href="contato.html">CONTATO &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a></li>
@@ -202,7 +208,7 @@
         </table>
     </header>
     <div class="crop"><img src="img/banner2.jpg" alt="foto de são Paulo"></div>
-    <h1>Contate a gente</h1>
+    <h1 class="titulobanner">Contate a gente</h1>
     <h1 id="respeito">______</h1>
     <h1 id="explo">___</h1>
     <h2>Envie uma mensagem</h2>
@@ -276,7 +282,7 @@
         <table id="ajuste-top">
             <tbody>
                 <tr>
-                    <td><label for="contact-message" class="lbl_message">Sua menssagem</label></td>
+                    <td><label for="contact-message" class="lbl_message" id="Mensagem">Sua menssagem</label></td>
                 <tr></tr>
                 <td><textarea name="message" id="txtarea_message" cols="40" rows="20"></textarea></td>
                 </tr>

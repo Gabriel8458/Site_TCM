@@ -152,28 +152,38 @@
             background-color: rgba(200, 200, 255, 0.5);
             border-color: rgba(0, 0, 0, 0.3);
         }
+		
+		.titulobanner{
+		margin-top:-10.7%;
+		}
+		
     </style>
     <script>
         function veri() {
             if (document.getElementById("nome").value == "") {
-                window.alert("Preencha o nome!");
+                window.alert("Fill in name box!");
                 document.getElementById("nome").focus();
             }
             else if (document.getElementById("E-mail").value == "") {
-                window.alert("Preencha o E-mail!");
+                window.alert("Fill in E-mail box!");
                 document.getElementById("E-mail").focus();
             }
             else if (document.getElementById("Telefone").value == "") {
-                window.alert("Preencha o Telefone!");
+                window.alert("Fill in phone box!");
                 document.getElementById("Telefone").focus();
             }
+			else if (document.getElementById("txtarea_message").value == "") {
+                window.alert("Fill in your message box!");
+                document.getElementById("Mensagem").focus();
+            }
             else {
-                window.alert("Dados enviados com sucesso!!!");
+                window.alert("Data successfully sent!");
             }
         }
         function limpar() {
             document.getElementById("nome").focus();
         }
+		
     </script>
 </head>
 <body>
@@ -191,7 +201,7 @@
                             </li>
                             <li><a href="empresa.html">COMPANY &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a></li>
-                            <li><a href="serviços.html">SERVICES &nbsp;&nbsp;&nbsp;&nbsp;
+                            <li><a href="serviços.html">PORTFOLIO &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a></li>
                             <li><a class="pagecolor" href="contato.html">CONTACT &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a></li>
@@ -202,7 +212,7 @@
         </table>
     </header>
     <div class="crop"><img src="img/banner2.jpg" alt="foto de são Paulo"></div>
-    <h1>Contact us</h1>
+    <h1 class="titulobanner">Contact us</h1>
     <h1 id="respeito">_____</h1>
     <h1 id="explo">___</h1>
     <h2>Send us a massage</h2>
@@ -276,7 +286,7 @@
         <table id="ajuste-top">
             <tbody>
                 <tr>
-                    <td><label for="contact-message" class="lbl_message">Your message</label></td>
+                    <td><label for="contact-message" class="lbl_message" id="mensagem">Your message</label></td>
                 <tr></tr>
                 <td><textarea name="message" id="txtarea_message" cols="40" rows="20"></textarea></td>
                 </tr>
@@ -288,7 +298,7 @@
             </tr>
             <tr />
             <tr>
-                <td>R. Guaipá, 678 - Vila Leopoldina, São Paulo</td>
+                <td>St. Guaipá, 678 - Vila Leopoldina, São Paulo</td>
             </tr>
             <tr />
             <tr />
